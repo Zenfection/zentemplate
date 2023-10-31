@@ -1,0 +1,110 @@
+<!doctype html>
+<html lang="en">
+
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <title>Forny Documentation</title>
+
+    <link href="https://getbootstrap.com/docs/4.3/dist/css/bootstrap.min.css" rel="stylesheet" crossorigin="anonymous">
+</head>
+
+<body>
+    <div class="container">
+        <h1 id="Forny-templates">Forny login and registration templates</h1>
+        <hr>
+        <p>Forny templates are based on popular CSS framework <a href="https://getbootstrap.com/">Bootstrap 4</a>.
+            All files are in this archive.</p>
+        <hr>
+        <h2 id="editing-template">Editing template</h2>
+        <p>To edit a basic knowledge of Bootstrap, HTML and CSS is required.
+            Any file can be edited with a simple text editor like <a href="https://code.visualstudio.com/">VS Code</a>
+            or <a href="https://notepad-plus-plus.org/">Notepad++</a>.</p>
+        <hr>
+        <h2 id="directory-structure">Directory structure</h2>
+        <p>There are three important directories inside of this archive:</p>
+        <ul>
+            <li>css/ -- where all CSS files are found</li>
+            <li>js/ -- JavaScript files</li>
+            <li>img/ -- images and other graphic assets</li>
+        </ul>
+        <p>HTML templates are located in the root directory.</p>
+        <p>Every HTML and CSS file was semantically prefixed with a theme number.
+            For example, files <code>01_login_and_register.html</code>, <code>01_reset.html</code> and
+            <code>css/theme-01.css</code>
+            belong to the same theme.</p>
+        <h4 id="css">CSS</h4>
+        <p>In <code>css/</code> directory you can find all CSS files from this templates pack.</p>
+        <p>The are two files which are shared between all themes:</p>
+        <ul>
+            <li>bootstrap.min.css -- an unchanged and minified version of Bootstrap framework</li>
+            <li>common.css -- a global styles which each theme depends on</li>
+            <li>theme-01.css, theme-02.css, etc -- styles for a concrete theme</li>
+        </ul>
+        <h4 id="js">JS</h4>
+        <p>Templates depend on JavaScript files provided by Bootstrap and jQuery.
+            You can find them in <code>js/</code> directory.</p>
+        <ul>
+            <li>bootstrap.min.js -- a minified version of Bootstrap framework</li>
+            <li>jquery.min.js -- a minified version of jQuery library</li>
+            <li>main.js -- scripts, which used by templates to add interactivity</li>
+            <li>demo.js -- scripts, used only in demo purposes. You don&#39;t need it in production.</li>
+        </ul>
+        <hr>
+        <h2 id="change-logo">Change logo</h2>
+        <p>Logos are plain SVG templates and can be replaced on per-theme basic.
+            Just replace SVG file in <code>img/</code> directory.
+            The name of file contains a number of theme so you can easily find a desired one.
+            For example, a file for theme &quot;01&quot; will have name <code>logo-01.svg</code>.</p>
+        <p>Note, SVG files are inlined into resulting HTML. If you want to use PNG or JPEG files instead,
+            you need to modify HTML templates. To do so open HTML file, locate element with class
+            <code>Forny-logo</code>
+            and replace inlined SVG with <code>img</code> tag:</p>
+        <pre><code class="language-html">&lt;!-- find this block --&gt;
+&lt;div class=&quot;Forny-logo&quot;&gt;
+    &lt;a href=&quot;#&quot;&gt;
+        &lt;svg xmlns=&quot;&quot;&gt;&lt;!-- cut --&gt;&lt;/svg&gt;
+    &lt;/a&gt;
+&lt;/div&gt;
+
+&lt;!-- and replace with this snippet --&gt;
+&lt;div class=&quot;Forny-logo&quot;&gt;
+    &lt;a href=&quot;#&quot;&gt;
+        &lt;img src=&quot;/path/to/image.png&quot; /&gt;
+    &lt;/a&gt;
+&lt;/div&gt;</code></pre>
+
+        <hr>
+        <h2 id="form-validation">Form validation</h2>
+        <p>When you want to indicate that some field has an error,
+            add <code>has-error</code> class to its parent &quot;form-group&quot; tag.
+            After that the form input will be decorated in errored state.</p>
+        <pre><code class="language-html">&lt;div class=&quot;form-group has-error&quot;&gt;
+    &lt;input type=&quot;email&quot; /&gt;
+&lt;/div&gt;</code></pre>
+        <p>Read more about how Bootstrap does the form validation here:
+            <a href="https://getbootstrap.com/docs/4.3/components/forms/#validation">Bootstrap&#39;s documentation</a>
+        </p>
+
+        <hr>
+        <h2 id="integration-with-existing-project">Integration with existing project</h2>
+        <p>If you add Forny to an existing project,
+            you need to add there styles to <code>&lt;head&gt;</code>:</p>
+        <pre><code class="language-html">&lt;link rel=&quot;stylesheet&quot; type=&quot;text/css&quot; href=&quot;css/bootstrap.min.css&quot; /&gt;
+&lt;link rel=&quot;stylesheet&quot; type=&quot;text/css&quot; href=&quot;css/common.css&quot; /&gt;
+&lt;link rel=&quot;stylesheet&quot; type=&quot;text/css&quot; href=&quot;css/theme-01.css&quot; /&gt;</code></pre>
+        <p>and attach these scripts right before closing <code>body</code> tag:</p>
+        <pre><code class="language-html">&lt;script type=&quot;text/javascript&quot; src=&quot;js/jquery.min.js&quot;&gt;&lt;/script&gt;
+&lt;script type=&quot;text/javascript&quot; src=&quot;js/bootstrap.min.js&quot;&gt;&lt;/script&gt;
+&lt;script type=&quot;text/javascript&quot; src=&quot;js/main.js&quot;&gt;&lt;/script&gt;</code></pre>
+        <p>Note, if you use own customized Bootstrap template, it may affect the look and feel of Forny theme.</p>
+
+        <hr>
+        <h2 id="credits">Credits</h2>
+        <p>Thank you for purchasing this template pack. We will be glad to help you in case of any questions related to
+            this
+            pack.</p>
+    </div>
+</body>
+
+</html>
